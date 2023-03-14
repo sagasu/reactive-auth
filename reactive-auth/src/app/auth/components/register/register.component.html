@@ -9,20 +9,25 @@ hi register
                     <a [routerLink]="['/login']">Have an account?</a>
                 </p>
                 Errors here
-                <form>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <fieldset>
                         <fieldset class="form-group">
                             <input 
                                 type="text"
                                 class="form-control form-control-lg"
-                                placeholder="Username"/>
+                                placeholder="Username"
+                                formControlName="username"
+                                />
+
                         </fieldset>
 
                         <fieldset class="form-group">
                             <input 
                                 type="text"
                                 class="form-control form-control-lg"
-                                placeholder="Email"/>
+                                placeholder="Email"
+                                formControlName="email"
+                                />
 
                         </fieldset>
 
@@ -30,7 +35,9 @@ hi register
                             <input 
                                 type="password"
                                 class="form-control form-control-lg"
-                                placeholder="Password"/>
+                                placeholder="Password"
+                                formControlName="password"
+                                />
                         </fieldset>
 
 
